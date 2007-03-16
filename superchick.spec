@@ -9,7 +9,7 @@ Group:		X11/Applications/Graphics
 Source0:	http://www.sacredchao.net/~piman/software/%{name}-%{version}.tar.bz2
 # Source0-md5:	fdcfd94f49a2be231dea528d4952499e
 URL:		http://www.sacredchao.net/~piman/
-Requires:	python >= 2.3
+Requires:	python >= 1:2.3
 Requires:       python-pygame
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -47,5 +47,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc NEWS README
-%{_mandir}/man1/*
 %attr(755,root,root) %{_bindir}/*
+%{_mandir}/man1/*
